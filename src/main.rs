@@ -1,5 +1,5 @@
 use core::time;
-use std::{thread};
+use std::thread;
 
 fn main() {
     // Once you've set up the Shop and Card structs, you should be able to
@@ -76,8 +76,8 @@ impl Shop {
     /// Get the price of the most expensive card in the shop
     fn most_expensive(&self) -> u32 {
         let mut most: u32 = self.cards[0].price;
-        for x in 1..3{ 
-            if most < self.cards[x].price{
+        for x in 1..3 {
+            if most < self.cards[x].price {
                 most = self.cards[x].price;
             }
         }
@@ -87,7 +87,7 @@ impl Shop {
     /// Get the total damage of all cards in the shop
     fn total_damage(&self) -> u32 {
         let mut damage: u32 = self.cards[0].damage;
-        for x in 1..3{
+        for x in 1..3 {
             damage += self.cards[x].damage;
         }
         return damage;
@@ -96,7 +96,7 @@ impl Shop {
     /// Get the total health of all cards in the shop
     fn total_health(&self) -> u32 {
         let mut health: u32 = self.cards[0].health;
-        for x in 1..3{
+        for x in 1..3 {
             health += self.cards[x].health;
         }
         return health;
